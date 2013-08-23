@@ -8,7 +8,7 @@
   },
   "dependecies" : {
     "request" : "2.27.0"
-  }
+  },
   "author": "Enrique Delgado (delgado.enrique@gmail.com)",
   "license": "MIT"
 }
