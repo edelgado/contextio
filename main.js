@@ -22,7 +22,7 @@ process.on('uncaughtException', function (err) {
 */
 
 // Pattern to find friends.
-var rPattern = new RegExp(/<a href="(.*)">(.*)<\/a>/gm);
+var rPattern = new RegExp(/<a href="(.*)">(.*)<\/a>/g);
 
 function parseMessages(accountId) {
   // Params for fetching messages from ContextIO
@@ -38,7 +38,9 @@ function parseMessages(accountId) {
     _.each(response.body, function (msg, index, list){
       //console.log(msg);
       _.each(msg.body, function (body, index, list){
-        //console.log(body.content.cyan);
+        // TODO: Use the cleaned body and modify the regExp to better match friends
+        //var cleanBody = body.content.replace(/\r\n/g, '');
+        //console.log(cleanBody);
         while (match = rPattern.exec(body.content)) {
           console.log(match[2].cyan + ' ' + match[1].yellow.underline);
         }
