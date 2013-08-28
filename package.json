@@ -2,13 +2,15 @@
   "name": "context-io-example",
   "version": "0.0.1",
   "description": "Content.io API Usage Example",
-  "main": "index.js",
+  "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies" : {
     "contextio" : "0.3.0",
-    "colors" : "0.6.2"
+    "colors" : "0.6.2",
+    "underscore" : "1.5.1"
+    //"cheerio": "0.12.1"
   },
   "author": "Enrique Delgado (delgado.enrique@gmail.com)",
   "license": "MIT"
